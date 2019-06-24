@@ -1,0 +1,129 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Raycaster", "Raycaster.vcxproj", "{0EC069B8-DEFD-408E-AC00-34555E4BDEB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{D470393A-F1F3-472F-B7AA-532AA1DEFEA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDL-2.0.9", "SDL-2.0.9", "{66C27E9F-5B56-4986-83D9-0BE4C427AC60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{A885D13C-34F9-4DCB-987B-B9D0A0A5D7F3}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\SDL2-2.0.9\include\begin_code.h = Libraries\SDL2-2.0.9\include\begin_code.h
+		Libraries\SDL2-2.0.9\include\close_code.h = Libraries\SDL2-2.0.9\include\close_code.h
+		Libraries\SDL2-2.0.9\include\SDL.h = Libraries\SDL2-2.0.9\include\SDL.h
+		Libraries\SDL2-2.0.9\include\SDL_assert.h = Libraries\SDL2-2.0.9\include\SDL_assert.h
+		Libraries\SDL2-2.0.9\include\SDL_atomic.h = Libraries\SDL2-2.0.9\include\SDL_atomic.h
+		Libraries\SDL2-2.0.9\include\SDL_audio.h = Libraries\SDL2-2.0.9\include\SDL_audio.h
+		Libraries\SDL2-2.0.9\include\SDL_bits.h = Libraries\SDL2-2.0.9\include\SDL_bits.h
+		Libraries\SDL2-2.0.9\include\SDL_blendmode.h = Libraries\SDL2-2.0.9\include\SDL_blendmode.h
+		Libraries\SDL2-2.0.9\include\SDL_clipboard.h = Libraries\SDL2-2.0.9\include\SDL_clipboard.h
+		Libraries\SDL2-2.0.9\include\SDL_config.h = Libraries\SDL2-2.0.9\include\SDL_config.h
+		Libraries\SDL2-2.0.9\include\SDL_config.h.cmake = Libraries\SDL2-2.0.9\include\SDL_config.h.cmake
+		Libraries\SDL2-2.0.9\include\SDL_config.h.in = Libraries\SDL2-2.0.9\include\SDL_config.h.in
+		Libraries\SDL2-2.0.9\include\SDL_config_android.h = Libraries\SDL2-2.0.9\include\SDL_config_android.h
+		Libraries\SDL2-2.0.9\include\SDL_config_iphoneos.h = Libraries\SDL2-2.0.9\include\SDL_config_iphoneos.h
+		Libraries\SDL2-2.0.9\include\SDL_config_macosx.h = Libraries\SDL2-2.0.9\include\SDL_config_macosx.h
+		Libraries\SDL2-2.0.9\include\SDL_config_macosx.h.orig = Libraries\SDL2-2.0.9\include\SDL_config_macosx.h.orig
+		Libraries\SDL2-2.0.9\include\SDL_config_minimal.h = Libraries\SDL2-2.0.9\include\SDL_config_minimal.h
+		Libraries\SDL2-2.0.9\include\SDL_config_pandora.h = Libraries\SDL2-2.0.9\include\SDL_config_pandora.h
+		Libraries\SDL2-2.0.9\include\SDL_config_psp.h = Libraries\SDL2-2.0.9\include\SDL_config_psp.h
+		Libraries\SDL2-2.0.9\include\SDL_config_windows.h = Libraries\SDL2-2.0.9\include\SDL_config_windows.h
+		Libraries\SDL2-2.0.9\include\SDL_config_winrt.h = Libraries\SDL2-2.0.9\include\SDL_config_winrt.h
+		Libraries\SDL2-2.0.9\include\SDL_config_wiz.h = Libraries\SDL2-2.0.9\include\SDL_config_wiz.h
+		Libraries\SDL2-2.0.9\include\SDL_copying.h = Libraries\SDL2-2.0.9\include\SDL_copying.h
+		Libraries\SDL2-2.0.9\include\SDL_cpuinfo.h = Libraries\SDL2-2.0.9\include\SDL_cpuinfo.h
+		Libraries\SDL2-2.0.9\include\SDL_egl.h = Libraries\SDL2-2.0.9\include\SDL_egl.h
+		Libraries\SDL2-2.0.9\include\SDL_endian.h = Libraries\SDL2-2.0.9\include\SDL_endian.h
+		Libraries\SDL2-2.0.9\include\SDL_error.h = Libraries\SDL2-2.0.9\include\SDL_error.h
+		Libraries\SDL2-2.0.9\include\SDL_events.h = Libraries\SDL2-2.0.9\include\SDL_events.h
+		Libraries\SDL2-2.0.9\include\SDL_filesystem.h = Libraries\SDL2-2.0.9\include\SDL_filesystem.h
+		Libraries\SDL2-2.0.9\include\SDL_gamecontroller.h = Libraries\SDL2-2.0.9\include\SDL_gamecontroller.h
+		Libraries\SDL2-2.0.9\include\SDL_gesture.h = Libraries\SDL2-2.0.9\include\SDL_gesture.h
+		Libraries\SDL2-2.0.9\include\SDL_haptic.h = Libraries\SDL2-2.0.9\include\SDL_haptic.h
+		Libraries\SDL2-2.0.9\include\SDL_hints.h = Libraries\SDL2-2.0.9\include\SDL_hints.h
+		Libraries\SDL2-2.0.9\include\SDL_joystick.h = Libraries\SDL2-2.0.9\include\SDL_joystick.h
+		Libraries\SDL2-2.0.9\include\SDL_keyboard.h = Libraries\SDL2-2.0.9\include\SDL_keyboard.h
+		Libraries\SDL2-2.0.9\include\SDL_keycode.h = Libraries\SDL2-2.0.9\include\SDL_keycode.h
+		Libraries\SDL2-2.0.9\include\SDL_loadso.h = Libraries\SDL2-2.0.9\include\SDL_loadso.h
+		Libraries\SDL2-2.0.9\include\SDL_log.h = Libraries\SDL2-2.0.9\include\SDL_log.h
+		Libraries\SDL2-2.0.9\include\SDL_main.h = Libraries\SDL2-2.0.9\include\SDL_main.h
+		Libraries\SDL2-2.0.9\include\SDL_messagebox.h = Libraries\SDL2-2.0.9\include\SDL_messagebox.h
+		Libraries\SDL2-2.0.9\include\SDL_mouse.h = Libraries\SDL2-2.0.9\include\SDL_mouse.h
+		Libraries\SDL2-2.0.9\include\SDL_mutex.h = Libraries\SDL2-2.0.9\include\SDL_mutex.h
+		Libraries\SDL2-2.0.9\include\SDL_name.h = Libraries\SDL2-2.0.9\include\SDL_name.h
+		Libraries\SDL2-2.0.9\include\SDL_opengl.h = Libraries\SDL2-2.0.9\include\SDL_opengl.h
+		Libraries\SDL2-2.0.9\include\SDL_opengl_glext.h = Libraries\SDL2-2.0.9\include\SDL_opengl_glext.h
+		Libraries\SDL2-2.0.9\include\SDL_opengles.h = Libraries\SDL2-2.0.9\include\SDL_opengles.h
+		Libraries\SDL2-2.0.9\include\SDL_opengles2.h = Libraries\SDL2-2.0.9\include\SDL_opengles2.h
+		Libraries\SDL2-2.0.9\include\SDL_opengles2_gl2.h = Libraries\SDL2-2.0.9\include\SDL_opengles2_gl2.h
+		Libraries\SDL2-2.0.9\include\SDL_opengles2_gl2ext.h = Libraries\SDL2-2.0.9\include\SDL_opengles2_gl2ext.h
+		Libraries\SDL2-2.0.9\include\SDL_opengles2_gl2platform.h = Libraries\SDL2-2.0.9\include\SDL_opengles2_gl2platform.h
+		Libraries\SDL2-2.0.9\include\SDL_opengles2_khrplatform.h = Libraries\SDL2-2.0.9\include\SDL_opengles2_khrplatform.h
+		Libraries\SDL2-2.0.9\include\SDL_pixels.h = Libraries\SDL2-2.0.9\include\SDL_pixels.h
+		Libraries\SDL2-2.0.9\include\SDL_platform.h = Libraries\SDL2-2.0.9\include\SDL_platform.h
+		Libraries\SDL2-2.0.9\include\SDL_power.h = Libraries\SDL2-2.0.9\include\SDL_power.h
+		Libraries\SDL2-2.0.9\include\SDL_quit.h = Libraries\SDL2-2.0.9\include\SDL_quit.h
+		Libraries\SDL2-2.0.9\include\SDL_rect.h = Libraries\SDL2-2.0.9\include\SDL_rect.h
+		Libraries\SDL2-2.0.9\include\SDL_render.h = Libraries\SDL2-2.0.9\include\SDL_render.h
+		Libraries\SDL2-2.0.9\include\SDL_revision.h = Libraries\SDL2-2.0.9\include\SDL_revision.h
+		Libraries\SDL2-2.0.9\include\SDL_rwops.h = Libraries\SDL2-2.0.9\include\SDL_rwops.h
+		Libraries\SDL2-2.0.9\include\SDL_scancode.h = Libraries\SDL2-2.0.9\include\SDL_scancode.h
+		Libraries\SDL2-2.0.9\include\SDL_sensor.h = Libraries\SDL2-2.0.9\include\SDL_sensor.h
+		Libraries\SDL2-2.0.9\include\SDL_shape.h = Libraries\SDL2-2.0.9\include\SDL_shape.h
+		Libraries\SDL2-2.0.9\include\SDL_stdinc.h = Libraries\SDL2-2.0.9\include\SDL_stdinc.h
+		Libraries\SDL2-2.0.9\include\SDL_surface.h = Libraries\SDL2-2.0.9\include\SDL_surface.h
+		Libraries\SDL2-2.0.9\include\SDL_system.h = Libraries\SDL2-2.0.9\include\SDL_system.h
+		Libraries\SDL2-2.0.9\include\SDL_syswm.h = Libraries\SDL2-2.0.9\include\SDL_syswm.h
+		Libraries\SDL2-2.0.9\include\SDL_test.h = Libraries\SDL2-2.0.9\include\SDL_test.h
+		Libraries\SDL2-2.0.9\include\SDL_test_assert.h = Libraries\SDL2-2.0.9\include\SDL_test_assert.h
+		Libraries\SDL2-2.0.9\include\SDL_test_common.h = Libraries\SDL2-2.0.9\include\SDL_test_common.h
+		Libraries\SDL2-2.0.9\include\SDL_test_compare.h = Libraries\SDL2-2.0.9\include\SDL_test_compare.h
+		Libraries\SDL2-2.0.9\include\SDL_test_crc32.h = Libraries\SDL2-2.0.9\include\SDL_test_crc32.h
+		Libraries\SDL2-2.0.9\include\SDL_test_font.h = Libraries\SDL2-2.0.9\include\SDL_test_font.h
+		Libraries\SDL2-2.0.9\include\SDL_test_fuzzer.h = Libraries\SDL2-2.0.9\include\SDL_test_fuzzer.h
+		Libraries\SDL2-2.0.9\include\SDL_test_harness.h = Libraries\SDL2-2.0.9\include\SDL_test_harness.h
+		Libraries\SDL2-2.0.9\include\SDL_test_images.h = Libraries\SDL2-2.0.9\include\SDL_test_images.h
+		Libraries\SDL2-2.0.9\include\SDL_test_log.h = Libraries\SDL2-2.0.9\include\SDL_test_log.h
+		Libraries\SDL2-2.0.9\include\SDL_test_md5.h = Libraries\SDL2-2.0.9\include\SDL_test_md5.h
+		Libraries\SDL2-2.0.9\include\SDL_test_memory.h = Libraries\SDL2-2.0.9\include\SDL_test_memory.h
+		Libraries\SDL2-2.0.9\include\SDL_test_random.h = Libraries\SDL2-2.0.9\include\SDL_test_random.h
+		Libraries\SDL2-2.0.9\include\SDL_thread.h = Libraries\SDL2-2.0.9\include\SDL_thread.h
+		Libraries\SDL2-2.0.9\include\SDL_timer.h = Libraries\SDL2-2.0.9\include\SDL_timer.h
+		Libraries\SDL2-2.0.9\include\SDL_touch.h = Libraries\SDL2-2.0.9\include\SDL_touch.h
+		Libraries\SDL2-2.0.9\include\SDL_types.h = Libraries\SDL2-2.0.9\include\SDL_types.h
+		Libraries\SDL2-2.0.9\include\SDL_version.h = Libraries\SDL2-2.0.9\include\SDL_version.h
+		Libraries\SDL2-2.0.9\include\SDL_video.h = Libraries\SDL2-2.0.9\include\SDL_video.h
+		Libraries\SDL2-2.0.9\include\SDL_vulkan.h = Libraries\SDL2-2.0.9\include\SDL_vulkan.h
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EC069B8-DEFD-408E-AC00-34555E4BDEB3}.Debug|x64.ActiveCfg = Debug|x64
+		{0EC069B8-DEFD-408E-AC00-34555E4BDEB3}.Debug|x64.Build.0 = Debug|x64
+		{0EC069B8-DEFD-408E-AC00-34555E4BDEB3}.Debug|x86.ActiveCfg = Debug|Win32
+		{0EC069B8-DEFD-408E-AC00-34555E4BDEB3}.Debug|x86.Build.0 = Debug|Win32
+		{0EC069B8-DEFD-408E-AC00-34555E4BDEB3}.Release|x64.ActiveCfg = Release|x64
+		{0EC069B8-DEFD-408E-AC00-34555E4BDEB3}.Release|x64.Build.0 = Release|x64
+		{0EC069B8-DEFD-408E-AC00-34555E4BDEB3}.Release|x86.ActiveCfg = Release|Win32
+		{0EC069B8-DEFD-408E-AC00-34555E4BDEB3}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66C27E9F-5B56-4986-83D9-0BE4C427AC60} = {D470393A-F1F3-472F-B7AA-532AA1DEFEA1}
+		{A885D13C-34F9-4DCB-987B-B9D0A0A5D7F3} = {66C27E9F-5B56-4986-83D9-0BE4C427AC60}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C98880B-7B15-4BFD-A2EC-6D7C12CC1B7A}
+	EndGlobalSection
+EndGlobal
