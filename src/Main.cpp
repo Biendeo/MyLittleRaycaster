@@ -8,6 +8,7 @@
 #include "MathFunctions.h"
 
 bool StartSDL();
+void TerminateProgram(int exitCode);
 void ClearBackground(SDL_Renderer* renderer, SDL_Texture* texture, Uint32 clearColor);
 void ShowBuffer(SDL_Renderer* renderer, SDL_Texture* texture);
 
@@ -36,26 +37,27 @@ int main(int argc, char* argv[]) {
 	SDL_Event event;
 
 	while (true) {
-		SDL_PollEvent(&event);
-		if (event.type == SDL_QUIT) {
-			break;
-		} else if (event.type == SDL_KEYDOWN) {
-			if (event.key.keysym.sym == SDLK_UP) {
-				sphereY += 0.1;
-			} else if (event.key.keysym.sym == SDLK_DOWN) {
-				sphereY -= 0.1;
-			} else if (event.key.keysym.sym == SDLK_LEFT) {
-				sphereX -= 0.1;
-			} else if (event.key.keysym.sym == SDLK_RIGHT) {
-				sphereX += 0.1;
-			} else if (event.key.keysym.sym == SDLK_w) {
-				sphereZ += 0.1;
-			} else if (event.key.keysym.sym == SDLK_s) {
-				sphereZ -= 0.1;
-			} else if (event.key.keysym.sym == SDLK_a) {
-				sphereR -= 0.1;
-			} else if (event.key.keysym.sym == SDLK_d) {
-				sphereR += 0.1;
+		while (SDL_PollEvent(&event)) {
+			if (event.type == SDL_QUIT) {
+				TerminateProgram(0);
+			} else if (event.type == SDL_KEYDOWN) {
+				if (event.key.keysym.sym == SDLK_UP) {
+					sphereY += 0.1;
+				} else if (event.key.keysym.sym == SDLK_DOWN) {
+					sphereY -= 0.1;
+				} else if (event.key.keysym.sym == SDLK_LEFT) {
+					sphereX -= 0.1;
+				} else if (event.key.keysym.sym == SDLK_RIGHT) {
+					sphereX += 0.1;
+				} else if (event.key.keysym.sym == SDLK_w) {
+					sphereZ += 0.1;
+				} else if (event.key.keysym.sym == SDLK_s) {
+					sphereZ -= 0.1;
+				} else if (event.key.keysym.sym == SDLK_a) {
+					sphereR -= 0.1;
+				} else if (event.key.keysym.sym == SDLK_d) {
+					sphereR += 0.1;
+				}
 			}
 		}
 
@@ -67,17 +69,7 @@ int main(int argc, char* argv[]) {
 		++frameCount;
 		SDL_Delay(20);
 	}
-
-	if (frontBuffer != nullptr) {
-		SDL_DestroyTexture(frontBuffer);
-	}
-	if (renderer != nullptr) {
-		SDL_DestroyRenderer(renderer);
-	}
-	if (window != nullptr) {
-		SDL_DestroyWindow(window);
-	}
-	SDL_Quit();
+	TerminateProgram(0);
 	return 0;
 }
 
@@ -109,6 +101,24 @@ bool StartSDL() {
 	}
 
 	return true;
+}
+
+/// <summary>
+/// Cleans up SDL and immediately exits the program.
+/// </summary>
+/// <param name="exitCode"></param>
+void TerminateProgram(int exitCode) {
+	if (frontBuffer != nullptr) {
+		SDL_DestroyTexture(frontBuffer);
+	}
+	if (renderer != nullptr) {
+		SDL_DestroyRenderer(renderer);
+	}
+	if (window != nullptr) {
+		SDL_DestroyWindow(window);
+	}
+	SDL_Quit();
+	exit(exitCode);
 }
 
 /// <summary>
@@ -156,9 +166,9 @@ void DrawSphereScene(SDL_Renderer* renderer, SDL_Texture* texture) {
 
 			for (int screenY = threadNum; screenY < WINDOW_HEIGHT; screenY += static_cast<int>(std::thread::hardware_concurrency())) {
 				// The gradient of the Y axis of the ray (i.e. number of Y units moved per Z unit).
-				double yGradient = std::tan(ToRadians(Lerp(vFov / 2.0, vFov / -2.0, ((screenY + 1) / (2.0 * WINDOW_HEIGHT)))));
+				double yGradient = std::tan(ToRadians(Lerp(vFov / 2.0, vFov / -2.0, ((screenY + 1ll) / (2.0 * WINDOW_HEIGHT)))));
 				for (int screenX = 0; screenX < WINDOW_WIDTH; ++screenX) {
-					double xGradient = std::tan(ToRadians(Lerp(hFov / -2.0, hFov / 2.0, ((screenX + 1) / (2.0 * WINDOW_WIDTH)))));
+					double xGradient = std::tan(ToRadians(Lerp(hFov / -2.0, hFov / 2.0, ((screenX + 1ll) / (2.0 * WINDOW_WIDTH)))));
 					// Now to calculate the intersection point of the line and the sphere.
 					// This can be solved with some algerbraic manipulation and the quadratic formula.
 					// You get no solution if the sphere contains the origin. Otherwise you're likely to get two solutions,
