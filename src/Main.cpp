@@ -166,9 +166,9 @@ void DrawSphereScene(SDL_Renderer* renderer, SDL_Texture* texture) {
 
 			for (int screenY = threadNum; screenY < WINDOW_HEIGHT; screenY += static_cast<int>(std::thread::hardware_concurrency())) {
 				// The gradient of the Y axis of the ray (i.e. number of Y units moved per Z unit).
-				double yGradient = std::tan(ToRadians(Lerp(vFov / 2.0, vFov / -2.0, ((screenY + 1ll) / (2.0 * WINDOW_HEIGHT)))));
+				double yGradient = std::tan(ToRadians(Lerp(vFov / 2.0, vFov / -2.0, ((2.0 * screenY + 1.0) / (2.0 * WINDOW_HEIGHT)))));
 				for (int screenX = 0; screenX < WINDOW_WIDTH; ++screenX) {
-					double xGradient = std::tan(ToRadians(Lerp(hFov / -2.0, hFov / 2.0, ((screenX + 1ll) / (2.0 * WINDOW_WIDTH)))));
+					double xGradient = std::tan(ToRadians(Lerp(hFov / -2.0, hFov / 2.0, ((2.0 * screenX + 1.0) / (2.0 * WINDOW_WIDTH)))));
 					// Now to calculate the intersection point of the line and the sphere.
 					// This can be solved with some algerbraic manipulation and the quadratic formula.
 					// You get no solution if the sphere contains the origin. Otherwise you're likely to get two solutions,
